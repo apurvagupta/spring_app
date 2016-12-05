@@ -11,7 +11,7 @@ public class JettyServer {
 
         Server server = new Server(port);
         WebAppContext  webapp = new WebAppContext();
-        webapp.setContextPath("/myApp");
+        webapp.setContextPath("/");
         webapp.setWar(warPath);
 
         server.setHandler(webapp);
