@@ -7,11 +7,23 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-@RequestMapping(path = "/rest")
 public class MyController {
 
+    public static final String INDEX = "index.html";
+
     @RequestMapping(path = "/hello", method = RequestMethod.GET)
-    public ResponseEntity hello(){
-        return new ResponseEntity("hello",HttpStatus.OK);
+    public ResponseEntity hello() {
+        return new ResponseEntity("hello", HttpStatus.OK);
     }
+
+    
+    @RequestMapping(value = "/first", method = RequestMethod.GET)
+    public String emberRoute1() {
+        return INDEX;
+    }
+
+//    @RequestMapping(value = "/ember-route-2", method = RequestMethod.GET)
+//    public String emberRoute2() {
+//        return INDEX;
+//    }
 }

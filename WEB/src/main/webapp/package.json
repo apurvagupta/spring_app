@@ -1,7 +1,7 @@
 {
-  "name": "ember-app",
+  "name": "webapp",
   "version": "0.0.0",
-  "description": "Small description for ember-app goes here",
+  "description": "Small description for webapp goes here",
   "license": "MIT",
   "author": "",
   "directories": {
