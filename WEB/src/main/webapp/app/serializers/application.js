@@ -4,7 +4,10 @@ export default DS.JSONSerializer.extend({
   normalizeFindRecordResponse(store,type,payload){
     return{
       data:{
-        id:payload.hello.id,
+        id:payload.id,
+        attributes: {
+          content: payload
+        },
         type:type.modelName
       }
     };

@@ -6,8 +6,14 @@ export default Ember.Controller.extend({
 
   actions:{
     callbackEndAPI: function(){
+      var self = this;
+      var data = "";
       this.store.findRecord('hello', 1).then(function(response){
-        console.log("see the response"+response);
+        for(var key in response.data.content)
+        {
+          data = data + (response.data.content)[key] ;
+        }
+        self.set('model', data.htmlSafe());
       });
     }
   }
